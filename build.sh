@@ -67,6 +67,7 @@ ARGS=(
   -s EXTRA_EXPORTED_RUNTIME_METHODS="[FS, cwrap, ccall, setValue, writeAsciiToMemory]" # export extra runtime methods
   -s INITIAL_MEMORY=33554432 # 33554432 bytes = 32MB
   -s ALLOW_MEMORY_GROWTH=1 # allows the total amount of memory used to change depending on the demands of the application
+  -s MAXIMUM_MEMORY=4GB
   --post-js wasm/src/post.js
   --pre-js wasm/src/pre.js # emits a file after the emitted code. use to expose exit function
   -O3 # optimize code and reduce code size
