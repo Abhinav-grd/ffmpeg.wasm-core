@@ -4,6 +4,7 @@ set -euo pipefail
 
 EM_VERSION=2.0.24
 
+FFMPEG_ST=yes 
 docker pull emscripten/emsdk:$EM_VERSION
 docker run \
   --rm \
