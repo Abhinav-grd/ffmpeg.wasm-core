@@ -1,6 +1,6 @@
-# !/bin/bash -x
+# !/bin/bash 
 
-set -e -o pipefail
+set -eo pipefail
 
 # verify Emscripten version
 emcc -v
@@ -54,10 +54,10 @@ emmake make -j4
 mkdir -p wasm/dist
 ARGS=(
   -I. -I./fftools # Add directory to include search path
-  -Llibavcodec -Llibavdevice -Llibavfilter -Llibavformat -Llibavresample -Llibavutil -Llibpostproc -Llibswscale -Llibswresample # Add directory to library search path
+  -Llibavcodec  -Llibavfilter -Llibavformat -Llibavresample -Llibavutil -Llibpostproc -Llibswscale  # Add directory to library search path
   -Qunused-arguments # Don't emit warning for unused driver arguments.
   -o wasm/dist/ffmpeg-core.js fftools/ffmpeg_opt.c fftools/ffmpeg_filter.c fftools/ffmpeg_hw.c fftools/cmdutils.c fftools/ffmpeg.c # output
-  -lavdevice -lavfilter -lavformat -lavcodec -lswresample -lswscale -lavutil -lm # library
+   -lavfilter -lavformat -lavcodec  -lswscale -lavutil -lm # library
   -s USE_SDL=2 # use SDL2
   -s MODULARIZE=1 # use modularized version to be more flexible
   -s EXPORT_NAME="createFFmpegCore" # assign export name for browser
