@@ -1,5 +1,4 @@
-FFmpeg.wasm Core
-================
+# FFmpeg.wasm Core
 
 [![Node Version](https://img.shields.io/node/v/@ffmpeg/ffmpeg.svg)](https://img.shields.io/node/v/@ffmpeg/ffmpeg.svg)
 ![FFmpeg.wasm Core](https://github.com/ffmpegwasm/ffmpeg.wasm-core/workflows/FFmpeg.wasm/badge.svg?branch=n4.3.1-wasm)
@@ -18,6 +17,8 @@ If you have any issues for this repository, please put it here: https://github.c
 $ git clone https://github.com/ffmpegwasm/ffmpeg.wasm-core
 $ git submodule update --init --recursive
 ```
+
+123
 
 ## Build
 
@@ -55,41 +56,41 @@ $ npm test
 
 | Library/Tool Name | Version | Remark |
 | ----------------- | ------- | ------ |
-| Emscripten | 2.0.8 | |
-| FFmpeg | 4.3.1 | |
+| Emscripten        | 2.0.8   |        |
+| FFmpeg            | 4.3.1   |        |
 
 #### Video
 
-| Library/Tool Name | Version | Remark |
-| ----------------- | ------- | ------ |
-| x264 | 0.160.x | mp4 format |
-| x265 | 3.4 | mp4 format, only works with `-pix_fmt yuv420p10le` and `-pix_fmt yuv420p12le` |
-| libvpx | 1.9.0 | webm format |
-| theora | 1.1.1 | ogv format |
-| aom | 1.0.0 | mkv format, extremely slow (takes over 120s for 1s video), not recommended to use |
+| Library/Tool Name | Version | Remark                                                                            |
+| ----------------- | ------- | --------------------------------------------------------------------------------- |
+| x264              | 0.160.x | mp4 format                                                                        |
+| x265              | 3.4     | mp4 format, only works with `-pix_fmt yuv420p10le` and `-pix_fmt yuv420p12le`     |
+| libvpx            | 1.9.0   | webm format                                                                       |
+| theora            | 1.1.1   | ogv format                                                                        |
+| aom               | 1.0.0   | mkv format, extremely slow (takes over 120s for 1s video), not recommended to use |
 
 #### Audio
 
-| Library/Tool Name | Version | Remark |
-| ----------------- | ------- | ------ |
-| wavpack | 5.3.0 | wav/wv format |
-| lame | 3.100 | mp3 format |
-| fdk-aac | 2.0.1 | aac format |
-| ogg | 1.3.4 | required by vorbis |
-| vorbis | 1.3.6 | ogg format |
-| opus | 1.3.1 | opus format |
+| Library/Tool Name | Version | Remark             |
+| ----------------- | ------- | ------------------ |
+| wavpack           | 5.3.0   | wav/wv format      |
+| lame              | 3.100   | mp3 format         |
+| fdk-aac           | 2.0.1   | aac format         |
+| ogg               | 1.3.4   | required by vorbis |
+| vorbis            | 1.3.6   | ogg format         |
+| opus              | 1.3.1   | opus format        |
 
 #### Image
 
-| Library/Tool Name | Version | Remark |
-| ----------------- | ------- | ------ |
-| libwebp | 1.1.0 | webp format |
+| Library/Tool Name | Version | Remark      |
+| ----------------- | ------- | ----------- |
+| libwebp           | 1.1.0   | webp format |
 
 #### Others
 
-| Library/Tool Name | Version | Remark |
-| ----------------- | ------- | ------ |
-| freetype2 | 2.10.4 | font file support |
-| fribidi | 1.0.10 | Arabic and Hebrew alphabets support |
-| harfbuzz | 2.7.4 | text shaping engine |
-| libass | 0.15.0 | SSA/ASS subtitles rendering library |
+| Library/Tool Name | Version | Remark                              |
+| ----------------- | ------- | ----------------------------------- |
+| freetype2         | 2.10.4  | font file support                   |
+| fribidi           | 1.0.10  | Arabic and Hebrew alphabets support |
+| harfbuzz          | 2.7.4   | text shaping engine                 |
+| libass            | 0.15.0  | SSA/ASS subtitles rendering library |
