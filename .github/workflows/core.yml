@@ -1,5 +1,6 @@
 name: Build FFmpeg.wasm
 on:
+  workflow_dispatch:
   push:
     branches:
       - n4.3.1-wasm
